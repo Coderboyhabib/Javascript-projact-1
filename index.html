@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript Tutureal</title>
+</head>
+
+<body>
+    <section class="content">
+        <header class="header">
+            <h2>Javascript Tutureals</h2>
+        </header>
+        <section class="main_content">
+            <form name="frm">
+                <table>
+                    <caption>Caltulator Madthod And Mth Objact..</caption>
+                    <tr>
+                        <td>Input Box: </td>
+                        <td><input type="text" name="getValue"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="Absolute" onclick="caltulate(1)"></td>
+                        <td><input type="button" value="round" onclick="caltulate(2)"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="Sine" onclick="caltulate(3)"></td>
+                        <td><input type="button" value="Cosine" onclick="caltulate(4)"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td><input type="button" value="TenGen" onclick="caltulate(5)"></td>
+                        <td><input type="button" value="Log" onclick="caltulate(6)"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="Floor" onclick="caltulate(7)"></td>
+                        <td><input type="button" value="Chill" onclick="caltulate(8)"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="Squre Root" onclick="caltulate(9)"></td>
+                        <td><input type="button" value="Random" onclick="caltulate(10)"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="Max" onclick="caltulate(11)"></td>
+                        <td><input type="button" value="Min" onclick="caltulate(12)"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" value="E" onclick="caltulate(13)"></td>
+                        <td><input type="button" value="Pi" onclick="caltulate(14)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Result Box</td>
+                        <td><input type="text" name="nameShowRuslt"></td>
+                    </tr>
+                </table>
+            </form>
+            <script>
+                function caltulate(proces) {
+                    with(document.frm)
+                    switch (proces) {
+                        case 1:
+                            nameShowRuslt.value = Math.abs(getValue.value);
+                            break;
+
+                        case 2:
+                            nameShowRuslt.value = Math.round(getValue.value);
+                            break;
+
+                        case 3:
+                            nameShowRuslt.value = Math.sin(convdegree(getValue.value));
+                            break;
+
+                        case 4:
+                            nameShowRuslt.value = Math.cos(convdegree(getValue.value));
+                            break;
+
+                        case 5:
+                            nameShowRuslt.value = Math.tan(convdegree(getValue.value));
+                            break;
+
+                        case 6:
+                            nameShowRuslt.value = Math.log(getValue.value);
+                            break;
+
+                        case 7:
+                            nameShowRuslt.value = Math.floor(getValue.value);
+                            break;
+
+                        case 8:
+                            nameShowRuslt.value = Math.ceil(getValue.value);
+                            break;
+
+                        case 9:
+                            nameShowRuslt.value = Math.sqrt(getValue.value);
+                            break;
+
+                        case 10:
+                            nameShowRuslt.value = Math.random();
+                            break;
+
+                        case 11:
+                            alert(Math.max(getValue.value, prompt('Enter Number... ?', '0')) +
+                                'is gater than by the number');
+                            break;
+
+                        case 12:
+                            alert(Math.min(getValue.value, prompt('Enter Number... ?', '0')) +
+                                'is smaller than the number');
+                            break;
+
+                        case 13:
+                            nameShowRuslt.value = Math.E();
+                            break;
+
+                        case 14:
+                            nameShowRuslt.value = Math.PI();
+                            break;
+                    }
+                }
+
+
+                function convdegree(x) {
+                    return x * 22 / 7 / 180;
+                }
+            </script>
+        </section>
+        <footer class="footer">
+            <h2>I Love you sanjida</h2>
+        </footer>
+    </section>
+</body>
+
+</html>
